@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Washing Machine Bag - Premium Laundry Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fef9e6;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f9d423 0%, #f8b500 100%);
+        }
+        
+        .feature-icon {
+            background-color: #f8b500;
+            color: #000;
+        }
+        
+        .cta-button {
+            background-color: #000;
+            color: #f8b500;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #f8b500;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card {
+            background-color: #fff;
+            border-left: 4px solid #f8b500;
+        }
+        
+        .price-tag {
+            background-color: #000;
+            color: #f8b500;
+        }
+        
+        .product-highlight {
+            border: 2px dashed #f8b500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="bg-black text-yellow-400 py-4 px-6 shadow-lg relative z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-shoe-prints text-2xl"></i>
+                <h1 class="text-xl font-bold">ShoeCare Pro</h1>
+            </div>
+            <!-- Hamburger Button (Mobile) -->
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#features" class="hover:text-yellow-300 transition">Features</a></li>
+                    <li><a href="#how-it-works" class="hover:text-yellow-300 transition">How It Works</a></li>
+                    <li><a href="#testimonials" class="hover:text-yellow-300 transition">Reviews</a></li>
+                    <li><a href="#faq" class="hover:text-yellow-300 transition">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Mobile Side Drawer -->
+        <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-black text-yellow-400 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50 shadow-2xl">
+            <div class="flex justify-between items-center px-6 py-4 border-b border-yellow-400">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shoe-prints text-2xl"></i>
+                    <h1 class="text-xl font-bold">ShoeCare Pro</h1>
+                </div>
+                <button id="close-mobile-menu" class="focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="mt-8">
+                <ul class="flex flex-col space-y-6 px-6">
+                    <li><a href="#features" class="hover:text-yellow-300 transition" onclick="closeMenu()">Features</a></li>
+                    <li><a href="#how-it-works" class="hover:text-yellow-300 transition" onclick="closeMenu()">How It Works</a></li>
+                    <li><a href="#testimonials" class="hover:text-yellow-300 transition" onclick="closeMenu()">Reviews</a></li>
+                    <li><a href="#faq" class="hover:text-yellow-300 transition" onclick="closeMenu()">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-40 md:hidden"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-black mb-6">Shoe Washing Machine Bag</h1>
+                <p class="text-lg text-gray-800 mb-8">Protect your sneakers and keep your washing machine safe with our premium invisible zipper shoe laundry bag.</p>
+                
+                <div class="price-tag inline-block px-6 py-3 rounded-full mb-8">
+                    <span class="text-2xl font-bold">₹ 349</span>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <button id="buy-now-btn" class="cta-button px-8 py-3 rounded-full font-bold text-lg flex items-center">
+                        <i class="fas fa-shopping-cart mr-2"></i> Buy Now
+                    </button>
+                    <button class="bg-white px-8 py-3 rounded-full font-bold text-lg border-2 border-black hover:bg-gray-100 transition">
+                        Learn More
+                    </button>
+                </div>
+                
+                <div class="mt-6 flex items-center">
+                    <div class="flex -space-x-2">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-800">Trusted by 5000+ customers</p>
+                        <div class="flex text-yellow-40">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-black ml-2">4.2/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative product-highlight p-2 sm:p-2 rounded-lg bg-white shadow-2xl w-full max-w-md">
+                    <!-- Carousel Container -->
+                    <div id="carousel" class="relative w-full overflow-hidden" style="height: 320px;">
+                        <div id="carousel-inner" class="flex transition-transform duration-500 h-full">
+                            <img src="https://images.meesho.com/images/products/525755073/u1k0t_512.webp" alt="Shoe Washing Machine Bag 1" class="w-full h-full flex-shrink-0 rounded-lg object-contain bg-white">
+                            <img src="https://images.meesho.com/images/products/525755073/lmebp_512.webp" alt="Shoe Washing Machine Bag 2" class="w-full h-full flex-shrink-0 rounded-lg object-contain bg-white">
+                            <img src="https://images.meesho.com/images/products/525755073/0icvd_512.webp" alt="Shoe Washing Machine Bag 3" class="w-full h-full flex-shrink-0 rounded-lg object-contain bg-white">
+                            <img src="https://images.meesho.com/images/products/525755073/jrmc3_512.webp" alt="Shoe Washing Machine Bag 4" class="w-full h-full flex-shrink-0 rounded-lg object-contain bg-white">
+                        </div>
+                        <!-- Prev/Next Buttons -->
+                        <button id="carousel-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-60 text-yellow-400 rounded-full p-2 focus:outline-none z-10">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="carousel-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-60 text-yellow-400 rounded-full p-2 focus:outline-none z-10">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <!-- Dots -->
+                        <div id="carousel-dots" class="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2">
+                            <span class="w-2 h-2 bg-yellow-400 rounded-full inline-block cursor-pointer"></span>
+                            <span class="w-2 h-2 bg-gray-300 rounded-full inline-block cursor-pointer"></span>
+                            <span class="w-2 h-2 bg-gray-300 rounded-full inline-block cursor-pointer"></span>
+                            <span class="w-2 h-2 bg-gray-300 rounded-full inline-block cursor-pointer"></span>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-black text-yellow-400 px-4 py-2 rounded-full font-bold text-xs sm:text-base">
+                        Bestseller
+                    </div>
+                </div>
+            </div>
+            <script>
+                // Responsive Carousel Logic
+                const carouselInner = document.getElementById('carousel-inner');
+                const dots = document.querySelectorAll('#carousel-dots span');
+                const totalSlides = 4;
+                let currentSlide = 0;
+
+                function updateCarousel() {
+                    const slideWidth = carouselInner.clientWidth / totalSlides;
+                    carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    dots.forEach((dot, idx) => {
+                        dot.classList.toggle('bg-yellow-400', idx === currentSlide);
+                        dot.classList.toggle('bg-gray-300', idx !== currentSlide);
+                    });
+                }
+
+                document.getElementById('carousel-prev').onclick = function() {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                };
+                document.getElementById('carousel-next').onclick = function() {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateCarousel();
+                };
+                dots.forEach((dot, idx) => {
+                    dot.onclick = function() {
+                        currentSlide = idx;
+                        updateCarousel();
+                    };
+                });
+
+                // Responsive: update on window resize
+                window.addEventListener('resize', updateCarousel);
+
+                updateCarousel();
+            </script>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose Our Shoe Washing Bag?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card p-6 rounded-lg bg-gray-50 hover:shadow-lg transition">
+                    <div class="feature-icon w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Premium Protection</h3>
+                    <p class="text-gray-600">High-quality mesh material protects your shoes from damage while allowing thorough cleaning in the washing machine.</p>
+                </div>
+                
+                <div class="feature-card p-6 rounded-lg bg-gray-50 hover:shadow-lg transition">
+                    <div class="feature-icon w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-zipper text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Invisible Zipper</h3>
+                    <p class="text-gray-600">Smooth side zipper design prevents snagging and keeps shoes securely contained during the wash cycle.</p>
+                </div>
+                
+                <div class="feature-card p-6 rounded-lg bg-gray-50 hover:shadow-lg transition">
+                    <div class="feature-icon w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-expand-arrows-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Universal Fit</h3>
+                    <p class="text-gray-600">Fits all shoe sizes from small sandals to large sneakers and boots. One bag for your entire shoe collection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Section -->
+    <section class="py-16 px-6 bg-gray-100">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="rounded-lg shadow-lg w-full max-w-md overflow-hidden aspect-video bg-black">
+                        <iframe 
+                            id="js_video_iframe"
+                            src="https://jumpshare.com/embed/QyedqjXMK6o2bha183aW?autoplay=1"
+                            frameborder="0"
+                            allow="autoplay; fullscreen"
+                            webkitallowfullscreen
+                            mozallowfullscreen
+                            allowfullscreen
+                            class="w-full h-full"
+                        ></iframe>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">Invisible Zipper Side Opening Shoe Washing Bag</h2>
+                    <p class="text-lg mb-6">Keep your sneakers looking fresh without damaging them or your washing machine. Our specially designed shoe laundry bag features:</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span><strong>Durable Material:</strong> Made from high-quality, tear-resistant mesh that withstands repeated washing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span><strong>Secure Closure:</strong> Hidden zipper prevents shoes from falling out during the wash cycle</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span><strong>Machine Safe:</strong> Protects both your shoes and your washing machine from damage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span><strong>Reusable:</strong> Wash and dry the bag along with your shoes for endless use</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span><strong>Multi-Purpose:</strong> Also great for delicates, baby clothes, and other items needing protection</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-8">
+                        <p class="font-medium">⚠️ Without proper protection, washing shoes directly in the machine can damage both your shoes and the washing machine drum. Our bag provides the perfect solution!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">How To Use Your Shoe Washing Bag</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="step-card p-6 text-center">
+                    <div class="step-number bg-black text-yellow-400 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                    <h3 class="text-xl font-bold mb-3">Place Shoes Inside</h3>
+                    <p class="text-gray-600">Insert 1-2 pairs of shoes into the bag through the side zipper opening.</p>
+                </div>
+                
+                <div class="step-card p-6 text-center">
+                    <div class="step-number bg-black text-yellow-400 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                    <h3 class="text-xl font-bold mb-3">Secure the Zipper</h3>
+                    <p class="text-gray-600">Close the invisible zipper completely to ensure shoes stay contained.</p>
+                </div>
+                
+                <div class="step-card p-6 text-center">
+                    <div class="step-number bg-black text-yellow-400 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                    <h3 class="text-xl font-bold mb-3">Add to Washing Machine</h3>
+                    <p class="text-gray-600">Place the bag in your washing machine with your regular laundry.</p>
+                </div>
+                
+                <div class="step-card p-6 text-center">
+                    <div class="step-number bg-black text-yellow-400 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+                    <h3 class="text-xl font-bold mb-3">Wash & Dry</h3>
+                    <p class="text-gray-600">Run normal cycle. Can be tumble dried or air dried with your shoes.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="cta-button px-8 py-3 rounded-full font-bold text-lg">
+                    <i class="fas fa-play-circle mr-2"></i> Watch Demo Video
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-6 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4" alt="Customer">
+                        <div>
+                            <h4 class="font-bold">Priya Sharma</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"This bag is a game-changer! My white sneakers come out looking brand new every time. The zipper is so smooth and never gets stuck. Worth every rupee!"</p>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" class="w-12 h-12 rounded-full mr-4" alt="Customer">
+                        <div>
+                            <h4 class="font-bold">Rahul Patel</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"I was skeptical at first, but this bag really protects my expensive running shoes. No more loose laces getting tangled or shoes banging around in the washer."</p>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" class="w-12 h-12 rounded-full mr-4" alt="Customer">
+                        <div>
+                            <h4 class="font-bold">Ananya Gupta</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Bought two - one for my husband's work boots and one for my sneakers. The material is surprisingly strong and has held up through multiple washes already."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Now Section -->
+    <section id="order-form" class="py-6 px-6 bg-black text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Shoe Care Routine?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Get your Shoe Washing Machine Bag today and say goodbye to dirty sneakers and damaged washing machines!</p>
+            
+            <div class="max-w-md mx-auto bg-gray-900 rounded-lg p-2">
+                <div class="price-tag inline-block px-6 py-3 rounded-full mb-6">
+                    <span class="text-2xl font-bold">₹349</span>
+                </div>
+                
+                <p class="text-yellow-400 mb-1"><i class="fas fa-bolt mr-2"></i> Limited time offer! Only 37 left in stock</p>
+                
+                <!-- Embedded Office Form -->
+                <iframe width="640px" height="480px" src="https://forms.office.com/r/55frvVA7FF?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 px-6 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="border-b border-gray-200 pb-4">
+                    <button type="button" class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>What size shoes will fit in this washing bag?</span>
+                        <i class="fas fa-plus text-yellow-500"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-600 hidden">
+                        Our shoe washing bag is designed to accommodate all standard shoe sizes. The dimensions are 35cm x 30cm (13.8" x 11.8"), which can comfortably fit men's size 12 (US) or women's size 14 (US). For larger boots, we recommend washing one at a time.
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 pb-4">
+                    <button type="button" class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>Is this bag suitable for dryer use?</span>
+                        <i class="fas fa-plus text-yellow-500"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-600 hidden">
+                        Yes! The bag is made from heat-resistant materials that can withstand dryer temperatures up to 60°C (140°F). However, we always recommend checking your shoe manufacturer's care instructions before machine drying.
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 pb-4">
+                    <button type="button" class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>How many shoes can I wash at once?</span>
+                        <i class="fas fa-plus text-yellow-500"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-600 hidden">
+                        For optimal cleaning, we recommend washing 1-2 pairs of standard sneakers at a time. Overfilling the bag may reduce cleaning effectiveness. For bulkier shoes like boots or cleats, wash one pair at a time.
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 pb-4">
+                    <button type="button" class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>What's your return policy?</span>
+                        <i class="fas fa-plus text-yellow-500"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-600 hidden">
+                        We offer a 7-day return policy. If you're not completely satisfied with your shoe washing bag, simply contact us for a full refund.
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 pb-4">
+                    <button type="button" class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>How long does shipping take?</span>
+                        <i class="fas fa-plus text-yellow-500"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-600 hidden">
+                        Most orders are processed within 24 hours and delivered within 3-5 business days via standard shipping. Express shipping options are available at checkout for faster delivery.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-yellow-400 py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-shoe-prints mr-2"></i> ShoeCare Pro
+                    </h3>
+                    <p class="text-gray-400">Premium shoe care solutions for the modern lifestyle.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-300 transition">Home</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-yellow-300 transition">Features</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-yellow-300 transition">How It Works</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-yellow-300 transition">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-yellow-300 transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-yellow-400"></i>
+                            <span>ekshortsyt@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+
+            </div>
+            
+            <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 ShoeCare Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // filepath: /Users/ekamjotsingh/Documents/study/websites/to do list /shopping.html
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+
+        function openMenu() {
+            mobileMenu.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+        }
+        function closeMenu() {
+            mobileMenu.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const answer = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                const isOpen = !answer.classList.contains('hidden');
+                // Close all answers
+                document.querySelectorAll('.faq-answer').forEach(function(a) {
+                    a.classList.add('hidden');
+                });
+                document.querySelectorAll('.faq-question i').forEach(function(i) {
+                    i.classList.remove('fa-minus');
+                    i.classList.add('fa-plus');
+                });
+                // Toggle current
+                if (!isOpen) {
+                    answer.classList.remove('hidden');
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
+            });
+        });
+
+        // Buy Now button scrolls to form section
+        document.getElementById('buy-now-btn').addEventListener('click', function() {
+            document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
